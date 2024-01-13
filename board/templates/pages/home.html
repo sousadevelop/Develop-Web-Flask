@@ -1,0 +1,16 @@
+<!-- 
+    As alterações realizadas aqui afetarão apenas esta página.
+    Então quando for realizar uma alteração especifica para está page, faça aqui.
+-->
+
+{% extends 'base.html' %}
+
+{% block header %}
+    <h2>{% block title %} Página Inicial 👨‍💻 {% endblock title %}</h2>
+{% endblock header %}
+
+{% block content %}
+    <p>
+        Entenda melhor este projeto visitando a página <a href="{{ url_for('pages.about') }}">Sobre o Projeto</a>.
+    </p>
+{% endblock content %}

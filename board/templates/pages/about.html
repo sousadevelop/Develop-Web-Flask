@@ -1,0 +1,17 @@
+<!-- 
+    As alterações realizadas aqui afetarão apenas esta página.
+    Então quando for realizar uma alteração especifica para está page, faça aqui.
+-->
+
+{% extends 'base.html' %}
+
+{% block header %}
+  <h2>{% block title %}Sobre o Projeto...😎{% endblock title %}</h2>
+{% endblock header %}
+
+{% block content %}
+  <p>This is a message board for friendly messages.</p>
+  <p>
+    Para retornar a página inicial clique em <a href="{{ url_for('pages.home') }}">Página Inicial</a>
+  </p>
+{% endblock content %}

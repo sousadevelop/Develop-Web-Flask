@@ -1,0 +1,27 @@
+<!-- 
+    Aqui tudo o que você colocar ele replicará nos templates de todas as páginas.
+    Então quando for realizar uma alteração gerérica, faça nesse template.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Projeto Programação FULL {% block title %}{% endblock title %}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+    <body>
+        <h1>Projeto Flask 🐍</h1>
+        
+        <!-- inclusão do menu de navegação em toda as páginas -->
+        {% include("_navigation.html") %} 
+
+        <section>
+        <header>
+            {% block header %}{% endblock header %}
+        </header>
+        <main>
+            {% block content %}<p>No messages.</p>{% endblock content %}
+        <main>
+        </section>
+    </body>
+</html>
