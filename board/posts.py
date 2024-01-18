@@ -1,5 +1,7 @@
 from flask import (
-    Blueprint, 
+    Blueprint,
+    current_app, 
+    flash,
     render_template,
     redirect,
     request,
@@ -23,7 +25,11 @@ def create():
                 (author, message),
             )
             db.commit()
+            current_app.logger.info(f"Novo post de {author}")
+            flash(f"Obrigado pelo seu post, {author}!", category="success")
             return redirect(url_for("posts.posts"))
+        else:
+            flash(f"Você precisa postar uma mensagem.", category="error")
 
     return render_template("posts/create.html")
 

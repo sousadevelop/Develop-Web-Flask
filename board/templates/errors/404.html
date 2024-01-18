@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>{% block title %}Página não encontrada{% endblock title %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<h1>Página não encontrada</h1>
+<p>Por favor, siga para uma das páginas abaixo:</p>
+  {% include("_navigation.html") %}
+</body>
+</html>
